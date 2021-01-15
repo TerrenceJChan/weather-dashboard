@@ -1,0 +1,24 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "UofT Coding Bootcamp Week 6 Challenge - Coding Quiz",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwind build src/precss.css -o assets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TerrenceJChan/weather-dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TerrenceJChan/weather-dashboard/issues"
+  },
+  "homepage": "https://github.com/TerrenceJChan/weather-dashboard#readme",
+  "dependencies": {
+    "autoprefixer": "^10.2.1",
+    "tailwindcss": "^2.0.2"
+  }
+}
