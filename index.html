@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
-<body>
+
+<body class="bg-gradient-to-r from-yellow-100 to-orange-100">
     <h1 class="text-center">Weather Dashboard</h1>
+
+    <main class="grid grid-cols-12 gap-x-5">
+        <div class="col-span-3 flex">
+            <div class="px-5 rounded-md shadow-sm flex-auto">
+                <input
+                    class="focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-md"
+                    type="text" placeholder="City">
+            </div>
+        </div>
+        <div class="col-span-9">
+            Test
+        </div>
+    </main>
 </body>
+
 </html>
