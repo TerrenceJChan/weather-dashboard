@@ -6,22 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/auxiliary.css">
 </head>
 
 <body class="bg-gradient-to-r from-yellow-100 to-orange-100">
-    <h1 class="text-center">Weather Dashboard</h1>
+    <h1 class="text-center h-16">Weather Dashboard</h1>
 
     <main class="grid grid-cols-12 gap-x-5">
-        <div class="col-span-3 flex">
-            <div class="px-5 rounded-md shadow-sm flex-auto">
+
+        <!-- City Search -->
+        <div class="col-span-3 flex flex-col bg-opacity-50 bg-gray-300">
+            <div class="self-center">
+                <h2 class="self-center">Select a City</h2>
+            </div>
+            <div class="px-5 rounded-md self-center">
                 <input
-                    class="focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-md"
+                    class="focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-md shadow-sm "
                     type="text" placeholder="City">
             </div>
         </div>
-        <div class="col-span-9">
-            Test
+
+        <!-- Weather Display -->
+        <div class="col-span-9 bg-opacity-50 bg-gray-300">
+            <!-- Current Weather -->
+            <div>
+                <h2 class="text-center"><span id="city-name"></span> Placeholder Header <span id="current-date"></span></h2>
+                <div class="flex justify-around">
+                    <div>Test1</div>
+                    <div>Test2</div>
+                </div>
+            </div>
+            <!-- 5-Day Forecast -->
         </div>
+
     </main>
 </body>
 
