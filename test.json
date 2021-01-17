@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -80.5164,
+        "lat": 43.4668
+    },
+    "weather": [
+        {
+            "id": 500,
+            "main": "Rain",
+            "description": "light rain",
+            "icon": "10n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 272.92,
+        "feels_like": 266.3,
+        "temp_min": 272.59,
+        "temp_max": 273.15,
+        "pressure": 998,
+        "humidity": 86
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.17,
+        "deg": 260,
+        "gust": 9.77
+    },
+    "clouds": {
+        "all": 90
+    },
+    "dt": 1610877901,
+    "sys": {
+        "type": 1,
+        "id": 836,
+        "country": "CA",
+        "sunrise": 1610887835,
+        "sunset": 1610921612
+    },
+    "timezone": -18000,
+    "id": 6176823,
+    "name": "Waterloo",
+    "cod": 200
+}
