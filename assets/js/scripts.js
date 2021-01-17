@@ -1,17 +1,28 @@
-var cityName;
+var cityName = "Waterloo";
 var searchValue = document.getElementById('search');
 
 var init = function () {
-    searchValue.addEventListener('submit', function () {
+    document.getElementById('submit-city').addEventListener('click', function () {
         cityName = searchValue.value;
         console.log(cityName);
+        callWeather();
     })
+
+    document.getElementById('search').addEventListener("keydown", event => {
+        if (event.key === 'Enter') {
+            cityName = searchValue.value;
+            console.log(cityName);
+            callWeather();
+        }
+    });
+
     callWeather();
 }
 
-// Fetch request for CURRENT WEATHER
+
 function callWeather(calllback) {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Waterloo&appid=569731c1a4f5965656b996cf8ec76ae7&units=metric')
+    // Fetch request for CURRENT WEATHER
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=569731c1a4f5965656b996cf8ec76ae7&units=metric')
         .then(function (response) {
             return response.json();
         })
@@ -31,7 +42,8 @@ function callWeather(calllback) {
             console.log('Request failed', error)
         });
 
-    fetch('https://api.openweathermap.org/data/2.5/forecast?q=Waterloo&appid=569731c1a4f5965656b996cf8ec76ae7&units=metric')
+    // Fetch request for 5-DAY FORECAST
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=569731c1a4f5965656b996cf8ec76ae7&units=metric')
         .then(function (response) {
             return response.json();
         })
