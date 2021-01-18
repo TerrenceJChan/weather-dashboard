@@ -2,6 +2,20 @@ var cityName = "Waterloo";
 var searchValue = document.getElementById('search');
 
 var init = function () {
+    if (localStorage.getItem('recent') == null) {
+        let initializeArray = [];
+        localStorage.setItem('recent', JSON.stringify(initializeArray));
+    }
+
+    for (var x = 1; x < 6; x++) {
+        let popItems = document.getElementById('pop-' + x);
+        popItems.addEventListener('click', function () {
+            cityName = popItems.innerText;
+            console.log(cityName);
+            callWeather();
+        })
+    }
+
     document.getElementById('submit-city').addEventListener('click', function () {
         cityName = searchValue.value;
         console.log(cityName);
