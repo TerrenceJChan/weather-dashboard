@@ -63,6 +63,11 @@ button:hover {
     font-weight: 500;
 }
 
+div.five-day {
+    border: 2px groove white;
+    padding: 10px;
+}
+
 #current-uv {
     font-weight: bolder;
 }

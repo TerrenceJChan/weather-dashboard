@@ -13,9 +13,9 @@
     <h1 class="text-center h-16">Weather Dashboard</h1>
 
     <main>
-        <div class="grid grid-flow-row grid-cols-12 gap-x-5 mx-5">
+        <div class="grid grid-flow-row md:grid-cols-12 gap-x-5 mx-5">
             <!-- City Search -->
-            <div class="col-span-3 flex flex-col bg-opacity-50 bg-gray-300 p-5">
+            <div class="md:col-span-3 flex flex-col bg-opacity-50 bg-gray-300 p-5">
                 <div class="self-center">
                     <h2 class="self-center">Select a City</h2>
                 </div>
@@ -42,7 +42,7 @@
             </div>
 
             <!-- Weather Display -->
-            <div class="col-span-9 bg-opacity-50 bg-gray-300 p-5">
+            <div class="md:col-span-9 bg-opacity-50 bg-gray-300 p-5">
                 <!-- Current Weather -->
                 <div>
                     <h2><span id="city-name"></span> | <span id="current-date"></span></h2>
@@ -62,8 +62,8 @@
         <!-- 5-Day Forecast -->
         <div class="bg-opacity-50 bg-gray-300 mt-5 mx-5 p-5">
             <h2>5 Day Forecast</h2>
-            <div class="grid grid-cols-5">
-                <div id="future-1">
+            <div class="grid md:grid-cols-5 gap-5 mt-5">
+                <div class="five-day" id="future-1">
                     <div class="date" id="future-1-date"></div>
                     <div id="future-1-weather"></div>
                     <div id="future-1-temp"></div>
@@ -71,7 +71,7 @@
                     <div id="future-1-wind"></div>
                     <div id="future-1-icon"></div>
                 </div>
-                <div id="future-2">
+                <div class="five-day" id="future-2">
                     <div class="date" id="future-2-date"></div>
                     <div id="future-2-weather"></div>
                     <div id="future-2-temp"></div>
@@ -79,7 +79,7 @@
                     <div id="future-2-wind"></div>
                     <div id="future-2-icon"></div>
                 </div>
-                <div id="future-3">
+                <div class="five-day" id="future-3">
                     <div class="date" id="future-3-date"></div>
                     <div id="future-3-weather"></div>
                     <div id="future-3-temp"></div>
@@ -87,7 +87,7 @@
                     <div id="future-3-wind"></div>
                     <div id="future-3-icon"></div>
                 </div>
-                <div id="future-4">
+                <div class="five-day" id="future-4">
                     <div class="date" id="future-4-date"></div>
                     <div id="future-4-weather"></div>
                     <div id="future-4-temp"></div>
@@ -95,7 +95,7 @@
                     <div id="future-4-wind"></div>
                     <div id="future-4-icon"></div>
                 </div>
-                <div id="future-5">
+                <div class="five-day" id="future-5">
                     <div class="date" id="future-5-date"></div>
                     <div id="future-5-weather"></div>
                     <div id="future-5-temp"></div>
