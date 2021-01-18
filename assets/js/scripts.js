@@ -59,7 +59,7 @@ function callWeather(calllback) {
                     let currentUV = document.getElementById('current-uv');
                     currentUV.innerText = "UV Index " + uvdata.value;
                     if (uvdata.value <= 3) {
-                        currentUV.style.backgroundColor = "green";
+                        currentUV.style.backgroundColor = "lightgreen";
                     } else if (uvdata.value <= 6) {
                         currentUV.style.backgroundColor = "orange";
                     } else {

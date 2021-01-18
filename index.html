@@ -16,16 +16,16 @@
 
         <div class="grid grid-flow-row grid-cols-12 gap-x-5 mx-5">
             <!-- City Search -->
-            <div class="col-span-3 flex flex-col bg-opacity-50 bg-gray-300">
+            <div class="col-span-3 flex flex-col bg-opacity-50 bg-gray-300 p-5">
                 <div class="self-center">
                     <h2 class="self-center">Select a City</h2>
                 </div>
                 <div class="px-5 rounded-md self-center">
                     <input
-                        class="focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-md shadow-sm"
+                        class="focus:ring-indigo-500 focus:border-indigo-500 block sm:text-sm border-gray-300 rounded-md shadow-sm mt-5"
                         id="search" type="text" placeholder="City">
                 </div>
-                <button class="self-center border-gray-300 rounded-md shadow-sm" id="submit-city">Submit</button>
+                <button class="self-center border-gray-300 rounded-md shadow-sm mt-3" id="submit-city">Submit</button>
                 <br>
                 <h2 class="self-center">Major Cities</h2>
                 <ul class="list-none text-center">
@@ -43,7 +43,7 @@
             </div>
 
             <!-- Weather Display -->
-            <div class="col-span-9 bg-opacity-50 bg-gray-300">
+            <div class="col-span-9 bg-opacity-50 bg-gray-300 p-5">
                 <!-- Current Weather -->
                 <div>
                     <h2><span id="city-name"></span> | <span id="current-date"></span></h2>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <!-- 5-Day Forecast -->
-        <div class="bg-opacity-50 bg-gray-300 mt-5 mx-5">
+        <div class="bg-opacity-50 bg-gray-300 mt-5 mx-5 p-5">
             <h2>5 Day Forecast</h2>
             <div class="grid grid-cols-5">
                 <div id="future-1">
