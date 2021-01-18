@@ -57,7 +57,7 @@ function callWeather(calllback) {
                 })
                 .then(function (uvdata) {
                     let currentUV = document.getElementById('current-uv');
-                    currentUV.innerText = "UV Index " + uvdata.value;
+                    currentUV.innerText = uvdata.value;
                     if (uvdata.value <= 3) {
                         currentUV.style.backgroundColor = "lightgreen";
                     } else if (uvdata.value <= 6) {
@@ -72,13 +72,13 @@ function callWeather(calllback) {
                 });
             let today = new Date();
             let date = (today.getMonth() + 1) + '-' + today.getDate() + '-' + today.getFullYear();
+            let weather = data.weather[0].description;
             document.getElementById('city-name').innerText = data.name;
             document.getElementById('current-date').innerText = date;
-            document.getElementById('current-weather').innerText = "There is " + data.weather[0].description + " outside.";
+            document.getElementById('current-weather').innerText = weather.charAt(0).toUpperCase() + weather.slice(1);
             document.getElementById('current-temp').innerText = "Temperature is " + data.main.temp + "°C";
             document.getElementById('current-humidity').innerText = "Humidity is " + data.main.humidity + "%";
-            document.getElementById('current-wind').innerText = "Current wind speeds are " + data.wind.speed + "km/h.";
-            document.getElementById('current-uv').innerText = "The UV index is:";
+            document.getElementById('current-wind').innerText = "Current wind speeds are " + data.wind.speed + "km/h";
             document.getElementById('current-icon').innerHTML = "<img src=\"http://openweathermap.org/img/w/" + data.weather[0].icon + ".png\">";
             return;
         })
@@ -98,12 +98,13 @@ function callWeather(calllback) {
                 let targetDate = new Date();
                 targetDate.setDate(targetDate.getDate() + i);
                 let date = (targetDate.getMonth() + 1) + '-' + targetDate.getDate() + '-' + targetDate.getFullYear();
+                let weather = data.list[jsonNum].weather[0].description;
 
                 document.getElementById('future-' + i + '-date').innerText = date;
-                document.getElementById('future-' + i + '-weather').innerText = "There is " + data.list[jsonNum].weather[0].description + " outside.";
-                document.getElementById('future-' + i + '-temp').innerText = "Temperature is " + data.list[jsonNum].main.temp + "°C";
-                document.getElementById('future-' + i + '-humidity').innerText = "Humidity is " + data.list[jsonNum].main.humidity + "%";
-                document.getElementById('future-' + i + '-wind').innerText = "Current wind speeds are " + data.list[jsonNum].wind.speed + "km/h.";
+                document.getElementById('future-' + i + '-weather').innerText = weather.charAt(0).toUpperCase() + weather.slice(1);
+                document.getElementById('future-' + i + '-temp').innerText = "Temperature will be " + data.list[jsonNum].main.temp + "°C";
+                document.getElementById('future-' + i + '-humidity').innerText = "Humidity will be " + data.list[jsonNum].main.humidity + "%";
+                document.getElementById('future-' + i + '-wind').innerText = "Wind speeds will be " + data.list[jsonNum].wind.speed + "km/h";
                 document.getElementById('future-' + i + '-icon').innerHTML = "<img src=\"http://openweathermap.org/img/w/" + data.list[jsonNum].weather[0].icon + ".png\">";
             }
         })
